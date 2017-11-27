@@ -3,7 +3,7 @@ const hooks = require('./avatar-users.hooks');
 const filters = require('./avatar-users.filters');
 const blobService = require('feathers-blob');
 const fs = require('fs-blob-store');
-const blobStorage = fs('./files/users/images');
+const blobStorage = fs('./public/files/users/images');
 
 
 module.exports = function () {

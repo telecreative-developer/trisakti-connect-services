@@ -3,7 +3,7 @@ const hooks = require('./thumbnail-news.hooks');
 const filters = require('./thumbnail-news.filters');
 const blobService = require('feathers-blob');
 const fs = require('fs-blob-store');
-const blobStorage = fs('./files/news/images');
+const blobStorage = fs('./public/files/news/images');
 
 module.exports = function () {
   const app = this;
