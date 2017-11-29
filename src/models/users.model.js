@@ -8,12 +8,12 @@ module.exports = function (app) {
   const users = sequelizeClient.define('users', {
     nim: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     email: {
       type: DataTypes.STRING,

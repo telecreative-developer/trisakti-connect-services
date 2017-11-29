@@ -5,39 +5,43 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const news = sequelizeClient.define('news', {
-    id_news: {
+  const careers = sequelizeClient.define('careers', {
+    id_career: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    thumbnail: {
+    job_title: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    title: {
+    company: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    content: {
+    experience: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    job_function: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    work_location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    salary: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    overview: {
       type: DataTypes.TEXT,
-      allowNull: false
-    },
-    status: {
-      type: DataTypes.STRING,
       allowNull: false
     },
     id: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    id_category: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    claps: {
-      type: DataTypes.INTEGER,
-      allowNull: true
     }
   }, {
     hooks: {
@@ -47,13 +51,11 @@ module.exports = function (app) {
     }
   });
 
-  news.associate = function (models) { // eslint-disable-line no-unused-vars
+  careers.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    news.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
-    news.hasMany(models.categories, {foreignKey: 'id_category', sourceKey: 'id_category'});
-    news.hasMany(models.comments, {foreignKey: 'id_news', sourceKey: 'id_news'});
+    careers.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return news;
+  return careers;
 };

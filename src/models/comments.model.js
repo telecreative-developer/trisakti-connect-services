@@ -5,39 +5,23 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const news = sequelizeClient.define('news', {
-    id_news: {
+  const comments = sequelizeClient.define('comments', {
+    id_comment: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    thumbnail: {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    status: {
-      type: DataTypes.STRING,
+    id_news: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     id: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    id_category: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    claps: {
-      type: DataTypes.INTEGER,
-      allowNull: true
     }
   }, {
     hooks: {
@@ -47,13 +31,11 @@ module.exports = function (app) {
     }
   });
 
-  news.associate = function (models) { // eslint-disable-line no-unused-vars
+  comments.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    news.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
-    news.hasMany(models.categories, {foreignKey: 'id_category', sourceKey: 'id_category'});
-    news.hasMany(models.comments, {foreignKey: 'id_news', sourceKey: 'id_news'});
+    comments.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return news;
+  return comments;
 };
