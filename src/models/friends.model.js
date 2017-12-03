@@ -5,23 +5,19 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const majors = sequelizeClient.define('majors', {
-    id_major: {
+  const friends = sequelizeClient.define('friends', {
+    id_friend: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    major: {
-      type: DataTypes.STRING,
+    id: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    id_faculty: {
+    confirm_by: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      reference: {
-        model: 'faculties',
-        key: 'id_faculty'
-      }
+      allowNull: false
     }
   }, {
     hooks: {
@@ -31,11 +27,11 @@ module.exports = function (app) {
     }
   });
 
-  majors.associate = function (models) { // eslint-disable-line no-unused-vars
+  friends.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    majors.hasMany(models.faculties, {foreignKey: 'id_faculty', sourceKey: 'id_faculty'});    
+    friends.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});    
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return majors;
+  return friends;
 };

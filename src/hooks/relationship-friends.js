@@ -2,7 +2,7 @@
 // For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
-  return function relationshipChats (hook) {
+  return function relationshipFriends (hook) {
     // Hooks can either return nothing or a promise
     hook.params.sequelize = {
       raw: false,

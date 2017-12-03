@@ -1,8 +1,10 @@
-const relationshipMajors = require('../../hooks/relationship-majors');
+const { authenticate } = require('feathers-authentication').hooks;
+
+const relationshipFriendsrequest = require('../../hooks/relationship-friendsrequest');
 
 module.exports = {
   before: {
-    all: [relationshipMajors()],
+    all: [authenticate('jwt'), relationshipFriendsrequest()],
     find: [],
     get: [],
     create: [],
