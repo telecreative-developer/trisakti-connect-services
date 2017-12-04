@@ -1,8 +1,10 @@
 const { authenticate } = require('feathers-authentication').hooks;
 
+const relationshipChats = require('../../hooks/relationship-chats');
+
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [authenticate('jwt'), relationshipChats()],
     find: [],
     get: [],
     create: [],

@@ -7,7 +7,9 @@ const filters = require('./chats.filters');
 module.exports = function () {
   const app = this;
   const Model = createModel(app);
-  const paginate = app.get('paginate');
+  const paginate = {
+    default: 2000
+  };
 
   const options = {
     name: 'chats',
