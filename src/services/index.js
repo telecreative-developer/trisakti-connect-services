@@ -10,6 +10,10 @@ const careers = require('./careers/careers.service.js');
 const friends = require('./friends/friends.service.js');
 const friendsrequest = require('./friendsrequest/friendsrequest.service.js');
 const chats = require('./chats/chats.service.js');
+const polls = require('./polls/polls.service.js');
+const pollsanswers = require('./pollsanswers/pollsanswers.service.js');
+const pollschoices = require('./pollschoices/pollschoices.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -24,4 +28,7 @@ module.exports = function () {
   app.configure(friends);
   app.configure(friendsrequest);
   app.configure(chats);
+  app.configure(polls);
+  app.configure(pollsanswers);
+  app.configure(pollschoices);
 };
