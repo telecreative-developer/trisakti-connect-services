@@ -74,6 +74,18 @@ module.exports = function (app) {
     id_faculty: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    twitter: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    linkedin: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   }, {
     hooks: {
