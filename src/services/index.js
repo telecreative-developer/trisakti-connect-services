@@ -16,6 +16,8 @@ const pollschoices = require('./pollschoices/pollschoices.service.js');
 
 const reports = require('./reports/reports.service.js');
 
+const chatsImages = require('./chats-images/chats-images.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -34,4 +36,5 @@ module.exports = function () {
   app.configure(pollsanswers);
   app.configure(pollschoices);
   app.configure(reports);
+  app.configure(chatsImages);
 };
