@@ -18,6 +18,8 @@ const reports = require('./reports/reports.service.js');
 
 const chatsImages = require('./chats-images/chats-images.service.js');
 
+const notifications = require('./notifications/notifications.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -37,4 +39,5 @@ module.exports = function () {
   app.configure(pollschoices);
   app.configure(reports);
   app.configure(chatsImages);
+  app.configure(notifications);
 };
