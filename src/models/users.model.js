@@ -99,7 +99,6 @@ module.exports = function (app) {
     // Define associations here
     users.hasMany(models.majors, {foreignKey: 'id_major', sourceKey: 'id_major'});
     users.hasMany(models.faculties, {foreignKey: 'id_faculty', sourceKey: 'id_faculty'});
-    users.hasMany(models.friends, {foreignKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
