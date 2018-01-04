@@ -29,7 +29,9 @@ module.exports = function (app) {
 
   friends.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    friends.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});    
+    friends.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
+    friends.hasMany(models.faculties, {foreignKey: 'id_faculty', sourceKey: 'users.id_faculty'});
+    friends.hasMany(models.majors, {foreignKey: 'id_major', targetKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

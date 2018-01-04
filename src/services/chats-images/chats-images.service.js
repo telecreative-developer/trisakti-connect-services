@@ -9,7 +9,7 @@ module.exports = function () {
   const app = this;
 
   // Initialize our service with any options it requires
-  app.use('/chats-images', blobService({Model: blobStorage}));
+  app.use('api/v1/chats-images', blobService({Model: blobStorage}));
 
   // Get our initialized service so that we can register hooks and filters
   const service = app.service('chats-images');

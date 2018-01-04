@@ -7,7 +7,9 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     hook.params.sequelize = {
       raw: false,
       include: [
-        hook.app.services.users.Model
+        hook.app.services.users.Model,
+        hook.app.services.faculties.Model,
+        hook.app.services.majors.Model
       ]
     };
     // that resolves with the `hook` object for asynchronous operations

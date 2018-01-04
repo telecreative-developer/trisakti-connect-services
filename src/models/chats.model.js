@@ -41,7 +41,7 @@ module.exports = function (app) {
 
   chats.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    chats.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});    
+    chats.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
