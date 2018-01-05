@@ -34,7 +34,7 @@ app.use(bodyParser.json({limit: '2mb'}));
 app.use(bodyParser.urlencoded({limit: '2mb', extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
-app.use('/', feathers.static(app.get('public')));
+app.use('/api/v1', feathers.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(hooks());
