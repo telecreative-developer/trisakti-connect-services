@@ -10,7 +10,7 @@ module.exports = function () {
   const app = this;
 
   // Initialize our service with any options it requires
-  app.use('/avatar-users', blobService({Model: blobStorage}));
+  app.use('/api/v1/avatar-users', blobService({Model: blobStorage}));
   
   // Get our initialized service so that we can register hooks and filters
   const service = app.service('avatar-users');

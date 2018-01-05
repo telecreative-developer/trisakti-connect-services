@@ -17,7 +17,7 @@ module.exports = function () {
   };
 
   // Initialize our service with any options it requires
-  app.use('api/v1/news', createService(options));
+  app.use('/api/v1/news', createService(options));
 
   // Get our initialized service so that we can register hooks and filters
   const service = app.service('news');
