@@ -86,6 +86,10 @@ module.exports = function (app) {
     linkedin: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
     }
   }, {
     hooks: {
