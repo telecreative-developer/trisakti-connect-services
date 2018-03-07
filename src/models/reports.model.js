@@ -11,20 +11,28 @@ module.exports = function (app) {
       autoIncrement: true,
       type: DataTypes.INTEGER
     },
-    name: {
+    nim: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    email: {
+    fullname: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    subject: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    major: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    faculty: {
       type: DataTypes.STRING,
       allowNull: false
     },
     content: {
       type: DataTypes.TEXT,
-      allowNull: false
-    },
-    status: {
-      type: DataTypes.STRING,
       allowNull: false
     }
   }, {
