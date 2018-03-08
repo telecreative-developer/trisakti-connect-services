@@ -11,10 +11,6 @@ module.exports = function (app) {
       autoIncrement: true,
       type: DataTypes.INTEGER
     },
-    nim: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     fullname: {
       type: DataTypes.STRING,
       allowNull: false
@@ -34,7 +30,11 @@ module.exports = function (app) {
     content: {
       type: DataTypes.TEXT,
       allowNull: false
-    }
+    },
+    graduate: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
   }, {
     hooks: {
       beforeCount(options) {
