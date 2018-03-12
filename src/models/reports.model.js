@@ -31,7 +31,7 @@ module.exports = function (app) {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    graduate: {
+    batch: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
