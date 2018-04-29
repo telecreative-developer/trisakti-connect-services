@@ -26,6 +26,8 @@ const shop = require('./shop/shop.service.js')
 
 const shopcategory = require('./shopcategory/shopcategory.service.js');
 
+const productImages = require('./product-images/product-images.service.js');
+
 module.exports = function() {
   const app = this // eslint-disable-line no-unused-vars
   app.configure(users)
@@ -49,4 +51,5 @@ module.exports = function() {
   app.configure(ads)
   app.configure(shop)
   app.configure(shopcategory);
+  app.configure(productImages);
 }
