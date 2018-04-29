@@ -21,10 +21,6 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      stock: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
       price: {
         type: DataTypes.INTEGER,
         allowNull: false
