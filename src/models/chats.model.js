@@ -30,7 +30,7 @@ module.exports = function (app) {
     sender: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
+    }
   }, {
     hooks: {
       beforeCount(options) {

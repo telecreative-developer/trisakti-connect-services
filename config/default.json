@@ -3,10 +3,10 @@
   "port": 3030,
   "public": "../public/",
   "paginate": {
-    "default": 10,
-    "max": 50
+    "default": 2000,
+    "max": 2500
   },
-  "mysql": "mysql://root:toor@45.32.118.128:3306/trisakti_connect",
+  "mysql": "mysql://root@localhost:3306/trisakti_connect",
   "authentication": {
     "secret":
       "0c5355c4fb9079f5b7b83c8bc09d538518a6f59972a86b6e432b86a0ce539eeba9977d56cb86be065ee36c6a18f6ca096138594986d046b3634bc0a69f3413c329da76c69dc666cf6ed63a30b7280b86f1b3f092687d67258755ca4697a61dde974c8bae637e95a5bda04dbea9b7aceee28d44a8b48051aa167af5cafcc05510e225965944127265ea304a938cc5548a14155d48ea6bf388bca61202bc07e141e470efd802f6d215e67fd2deff37e2e424e1695690554d5b25713081c9841d65478df6320399233cb97398135fec236458b8aa965aea188534b968245fc75f9bcc3ee0041967c182fd2520fd894f4a386a355b24a0e432c9a4f855dbc7a5c4e2",
@@ -30,3 +30,5 @@
     }
   }
 }
+
+// 45.32.118.128

@@ -33,7 +33,7 @@ module.exports = function (app) {
 
   majors.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    majors.hasMany(models.faculties, {foreignKey: 'id_faculty', sourceKey: 'id_faculty'});    
+    majors.hasMany(models.faculties, {foreignKey: 'id_faculty', sourceKey: 'id_faculty'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
