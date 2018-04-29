@@ -8,7 +8,7 @@ module.exports = function(options = {}) {
 		// Hooks can either return nothing or a promise
 		hook.params.sequelize = {
 			raw: false,
-			include: [hook.app.services.shopcategory.Model]
+			include: [hook.app.services.shopcategory.Model, hook.app.services.users.Model]
 		}
 		// that resolves with the `hook` object for asynchronous operations
 		return Promise.resolve(hook)

@@ -36,6 +36,10 @@ module.exports = function(app) {
       shopcategory_id: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     },
     {
@@ -53,6 +57,10 @@ module.exports = function(app) {
     shop.hasMany(models.shopcategory, {
       foreignKey: 'shopcategory_id',
       sourceKey: 'shopcategory_id'
+    })
+    shop.hasMany(models.users, {
+      foreignKey: 'id',
+      sourceKey: 'id'
     })
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   }
