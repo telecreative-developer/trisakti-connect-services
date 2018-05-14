@@ -22,7 +22,7 @@ module.exports = function(app) {
         allowNull: false
       },
       price: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       },
       description: {
@@ -32,6 +32,11 @@ module.exports = function(app) {
       shopcategory_id: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      status:{
+        type: DataTypes.BOOLEAN,
+	allowNull: false,
+	defaultValue: false
       },
       id: {
         type: DataTypes.INTEGER,

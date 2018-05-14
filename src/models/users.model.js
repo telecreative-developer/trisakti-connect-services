@@ -88,6 +88,10 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: true
       },
+      instagram: {
+	type: DataTypes.STRING,
+	allowNull : true
+      },
       verified: {
         type: DataTypes.BOOLEAN,
         allowNull: true
