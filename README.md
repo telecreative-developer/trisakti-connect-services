@@ -39,7 +39,7 @@ thumbnail: {
 }
 ```
 
-### Ads
+### Careers
 #### Resource Types (POST, GET, UPDATE, DELETE)
 http://localhost/careers
 #### Request & Response
@@ -79,6 +79,22 @@ overview: {
 },
 id: {
   type: DataTypes.INTEGER,
+  allowNull: false
+}
+```
+
+### Categories
+#### Resource Types (POST, GET, UPDATE, DELETE)
+http://localhost/categories
+#### Request & Response
+```javascript
+id_category: {
+  type: DataTypes.INTEGER,
+  primaryKey: true,
+  autoIncrement: true
+},
+category: {
+  type: DataTypes.STRING,
   allowNull: false
 }
 ```
