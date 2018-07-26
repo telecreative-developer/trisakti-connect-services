@@ -98,3 +98,35 @@ category: {
   allowNull: false
 }
 ```
+
+### Chat
+#### Resource Types (POST, GET, UPDATE, DELETE)
+http://localhost/chats
+#### Request & Response
+```javascript
+id_chat: {
+  type: DataTypes.INTEGER,
+  primaryKey: true,
+  autoIncrement: true
+},
+id: {
+  type: DataTypes.INTEGER,
+  allowNull: false
+},
+myid: {
+  type: DataTypes.INTEGER,
+  allowNull: false
+},
+message: {
+  type: DataTypes.TEXT,
+  allowNull: true
+},
+image: {
+  type: DataTypes.TEXT,
+  allowNull: true
+},
+sender: {
+  type: DataTypes.INTEGER,
+  allowNull: false
+}
+```
