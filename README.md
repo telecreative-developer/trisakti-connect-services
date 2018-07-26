@@ -508,3 +508,126 @@ id: {
   allowNull: false
 }
 ```
+
+### Shop Category
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/shopcategory
+
+#### Request & Response
+
+```javascript
+shopcategory_id: {
+  type: DataTypes.INTEGER,
+  primaryKey: true,
+  autoIncrement: true
+},
+thumbnail: {
+  type: DataTypes.STRING,
+  allowNull: false
+},
+name: {
+  type: DataTypes.STRING,
+  allowNull: false
+}
+```
+
+### Users
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/users
+
+#### Request & Response
+
+```javascript
+nim: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+name: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+email: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+phone: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+address: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+kecamatan: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+kelurahan: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+provinsi: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+postcode: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+gender: {
+  type: DataTypes.INTEGER,
+  allowNull: true
+},
+birth: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+birth_place: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+avatar: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+password: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+graduated: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+id_major: {
+  type: DataTypes.INTEGER,
+  allowNull: true
+},
+id_faculty: {
+  type: DataTypes.INTEGER,
+  allowNull: true
+},
+facebook: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+twitter: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+linkedin: {
+  type: DataTypes.STRING,
+  allowNull: true
+},
+instagram: {
+  type: DataTypes.STRING,
+  allowNull : true
+},
+verified: {
+  type: DataTypes.BOOLEAN,
+  allowNull: true
+}
+```
